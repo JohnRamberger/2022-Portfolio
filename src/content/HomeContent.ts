@@ -17,4 +17,4 @@ const Content = {
 };
 
 export default Content;
-module.exports = Content;
+// module.exports = Content;
