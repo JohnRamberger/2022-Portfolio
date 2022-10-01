@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./App.module.scss";
 //router
 import { useParams } from "react-router-dom";
@@ -11,15 +11,16 @@ import ThemeMap from "./config/ThemeMap";
 
 function App() {
   const { theme } = useParams();
-
-  return (
-    <div className={styles.App}>
-      {/* Load the site theme based on the param, or load the default theme if not found */}
-      {theme && ThemeMap.has(parseInt(theme))
-        ? ThemeMap.get(parseInt(theme))
-        : ThemeMap.get(config.defaultTheme)}
-    </div>
+  // Load the site theme based on the param, or load the default theme if not found
+  const [currentTheme] = useState<number>(
+    theme && ThemeMap.has(parseInt(theme))
+      ? parseInt(theme)
+      : config.randomTheme
+      ? Math.floor(Math.random() * Array.from(ThemeMap.keys()).length)
+      : config.defaultTheme
   );
+
+  return <div className={styles.App}>{ThemeMap.get(currentTheme)}</div>;
 }
 
 export default App;
