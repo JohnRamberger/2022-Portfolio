@@ -1,6 +1,6 @@
 const config = {
-  defaultTheme: 0,
-  randomTheme: true,
+  defaultTheme: 1,
+  randomTheme: false,
 };
 
 export default config;
