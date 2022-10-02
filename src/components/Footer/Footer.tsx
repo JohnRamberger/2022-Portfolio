@@ -13,7 +13,10 @@ const Footer: FC<FooterProps> = () => (
   <div className={styles.Footer} data-testid="Footer">
     <div
       className={styles.Wrapper}
-      style={{ maxWidth: config.wrapper.default }}
+      style={{
+        maxWidth: config.wrapper.default,
+        padding: `2em ${config.edgePadding}`,
+      }}
     >
       {cont.message ? <h2 className={styles.Message}>{cont.message}</h2> : ""}
       <Flex
