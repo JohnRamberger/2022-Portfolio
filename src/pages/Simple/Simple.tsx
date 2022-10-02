@@ -12,10 +12,6 @@ const Simple: FC<SimpleProps> = () => (
   <div className={`${styles.Simple} ${page_styles.Page}`} data-testid="Simple">
     <Navbar />
     <Hero />
-    <Flex dir="column">
-      <p>a</p>
-      <p>b</p>
-    </Flex>
   </div>
 );
 
