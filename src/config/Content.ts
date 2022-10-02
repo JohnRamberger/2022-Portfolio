@@ -38,3 +38,17 @@ export const HeroContent = {
     url: "#next",
   },
 };
+
+export const FooterContent = {
+  sections: [
+    {
+      label: "socials",
+      links: [
+        {
+          label: "test",
+          url: "#link1",
+        },
+      ],
+    },
+  ],
+};
