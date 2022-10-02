@@ -53,6 +53,19 @@ export const FooterContent: FooterContentProps = {
       label: "John Ramberger",
       links: [
         {
+          label: "Experience",
+          url: `#experience`,
+        },
+        {
+          label: "Projects",
+          url: "#projects",
+        },
+      ],
+    },
+    {
+      label: "Connect",
+      links: [
+        {
           label: "Email",
           type: "a",
           url: `mailto:${MeContent.email}`,
@@ -61,6 +74,12 @@ export const FooterContent: FooterContentProps = {
           label: "Github",
           type: "a",
           url: MeContent.links.github,
+          target: "_blank",
+        },
+        {
+          label: "LinkedIn",
+          type: "a",
+          url: MeContent.links.linkedin,
           target: "_blank",
         },
       ],
