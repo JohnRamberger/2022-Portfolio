@@ -2,7 +2,6 @@ import React, { FC } from "react";
 import styles from "./Navbar.module.scss";
 
 import Flex from "../../../layout/Flex/Flex";
-import { Link } from "react-router-dom";
 
 //load content
 import { NavbarContent as cont } from "../../../config/Content";
