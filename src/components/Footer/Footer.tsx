@@ -32,8 +32,13 @@ const Footer: FC<FooterProps> = () => (
           return (
             <Flex key={i} dir="column" style={{ flexWrap: "wrap" }}>
               <h2 className={styles.Minor}>{s.label}</h2>
+
               {s.links
-                ? s.links.map((l, j) => <Go link={l} className={styles.Link} />)
+                ? s.links.map((l, j) => (
+                    <div className={styles.Link}>
+                      <Go link={l} />
+                    </div>
+                  ))
                 : ""}
             </Flex>
           );
