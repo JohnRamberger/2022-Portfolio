@@ -53,6 +53,10 @@ export const FooterContent: FooterContentProps = {
       label: "John Ramberger",
       links: [
         {
+          label: "Home",
+          url: `#`,
+        },
+        {
           label: "Experience",
           url: `#experience`,
         },
