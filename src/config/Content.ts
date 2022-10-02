@@ -87,7 +87,7 @@ type FooterContentProps = {
 
 type FooterSection = {
   label: string;
-  links: Link[];
+  links?: Link[];
 };
 
 type Link = {
