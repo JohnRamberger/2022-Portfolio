@@ -3,7 +3,6 @@
   position: relative;
   width: 100%;
   height: 4em;
-  border: 1px solid red;
 }
 
 .Major {
@@ -11,7 +10,9 @@
 }
 
 .Link {
-  padding: 50% 0;
+  padding: 1em;
+  color: inherit;
+  text-decoration: none;
   &:hover {
     background: red;
   }

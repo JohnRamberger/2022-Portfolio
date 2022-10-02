@@ -27,10 +27,9 @@ const Navbar: FC<NavbarProps> = () => (
         style={{
           height: "100%",
           justifyContent: "flex-end",
-          alignItems: "stretch",
+          alignItems: "center",
           flexGrow: 1,
           gap: "1em",
-          border: "1px solid blue",
         }}
       >
         {cont.links.map((l, i) => (
