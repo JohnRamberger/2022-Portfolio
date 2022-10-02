@@ -25,13 +25,19 @@ const Hero: FC<HeroProps> = () => (
         <Flex dir="column" style={{ gap: "0.5em" }}>
           <h1 className={styles.Major}>{cont.major}</h1>
           {cont.minor ? <h2 className={styles.Minor}>{cont.minor}</h2> : ""}
-          {cont.links
-            ? cont.links.map((l, i) => (
-                <div key={i} className={styles.Link}>
-                  <Go link={l} />
-                </div>
-              ))
-            : ""}
+          {cont.links ? (
+            <Flex dir="row" style={{ gap: "0.5em" }}>
+              {cont.links
+                .map<React.ReactNode>((l, i) => (
+                  <div key={i} className={styles.Link}>
+                    <Go link={l} />
+                  </div>
+                ))
+                .reduce((prev, curr) => [prev, "•", curr])}
+            </Flex>
+          ) : (
+            ""
+          )}
           {cont.button ? (
             <div className={styles.Button}>
               <Go link={cont.button} />
