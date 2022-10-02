@@ -33,4 +33,8 @@ export const NavbarContent = {
 export const HeroContent = {
   major: `Hello! I'm ${Content.fname} ${Content.lname}`,
   minor: "A SWE located in Atlanta, GA",
+  button: {
+    label: "Explore",
+    url: "#next",
+  },
 };
