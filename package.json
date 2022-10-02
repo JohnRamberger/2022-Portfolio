@@ -1,7 +1,9 @@
 {
   "name": "2022-portfolio",
+  "author": "John Ramberger",
+  "repository": "https://github.com/JohnRamberger/2022-Portfolio",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
