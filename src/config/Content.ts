@@ -48,6 +48,7 @@ export const ExperienceContent = {};
 export const ProjectContent = {};
 
 export const FooterContent: FooterContentProps = {
+  message: "Thanks for getting to know me a little better!",
   sections: [
     {
       label: "John Ramberger",
@@ -105,6 +106,7 @@ export const FooterContent: FooterContentProps = {
 };
 
 type FooterContentProps = {
+  message: string;
   sections: FooterSection[];
 };
 
