@@ -1,5 +1,5 @@
 const config = {
-  defaultTheme: 1,
+  defaultTheme: 0,
   randomTheme: false,
 };
 
