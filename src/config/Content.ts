@@ -9,8 +9,6 @@ export const MeContent = {
     this: "https://github.com/JohnRamberger/2022-Portfolio",
     linkedin: "https://www.linkedin.com/in/johnramberger/",
   },
-  experience: {},
-  projects: {},
 };
 
 export const NavbarContent = {
@@ -39,6 +37,10 @@ export const HeroContent = {
     url: "#next",
   },
 };
+
+export const ExperienceContent = {};
+
+export const ProjectContent = {};
 
 export const FooterContent = {
   sections: [
