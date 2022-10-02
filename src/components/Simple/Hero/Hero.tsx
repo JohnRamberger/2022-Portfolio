@@ -5,6 +5,7 @@ import { HeroContent as cont } from "../../../config/Content";
 import { Link } from "react-router-dom";
 import Section from "../../../layout/Section/Section";
 import Flex from "../../../layout/Flex/Flex";
+import Go from "../../Go/Go";
 
 interface HeroProps {}
 
@@ -25,9 +26,9 @@ const Hero: FC<HeroProps> = () => (
           <h1 className={styles.Major}>{cont.major}</h1>
           {cont.minor ? <h2 className={styles.Minor}>{cont.minor}</h2> : ""}
           {cont.button ? (
-            <Link to={cont.button.url} className={styles.Button}>
-              {cont.button.label}
-            </Link>
+            <div className={styles.Button}>
+              <Go link={cont.button} />
+            </div>
           ) : (
             ""
           )}
