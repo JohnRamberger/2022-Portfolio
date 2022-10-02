@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
 
 interface GoProps {
   link?: LinkProps;
-  className?: typeof styles.Link;
+  style?: React.CSSProperties;
 }
 
-const Go: FC<GoProps> = ({ link, className }) => {
+const Go: FC<GoProps> = ({ link, style }) => {
   if (link)
     return (
-      <div className={`${styles.Go} ${className}`} data-testid="Go">
+      <div className={`${styles.Go}`} data-testid="Go" style={style}>
         {link.type === "a" ? (
           <a href={link.url} className={styles.Link} target={link.target ?? ""}>
             {link.label}
