@@ -12,7 +12,13 @@ interface NavbarProps {}
 
 const Navbar: FC<NavbarProps> = () => (
   <div className={styles.Navbar} data-testid="Navbar">
-    <div className={styles.Wrapper} style={{ maxWidth: config.wrapper.navbar }}>
+    <div
+      className={styles.Wrapper}
+      style={{
+        maxWidth: config.wrapper.navbar,
+        padding: `0 ${config.edgePadding}`,
+      }}
+    >
       <Flex
         dir="row"
         style={{
@@ -20,7 +26,6 @@ const Navbar: FC<NavbarProps> = () => (
           width: "100%",
           alignItems: "center",
           gap: "1em",
-          padding: "0 1em",
         }}
       >
         <h1 className={styles.Major}>{cont.title}</h1>
