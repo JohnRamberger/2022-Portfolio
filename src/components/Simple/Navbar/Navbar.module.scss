@@ -9,6 +9,7 @@
   display: block;
   position: relative;
   width: 100%;
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -18,10 +19,14 @@
 }
 
 .Link {
-  padding: 1em;
-  color: inherit;
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
+  height: fit-content;
+  a {
+    padding: 1em;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
