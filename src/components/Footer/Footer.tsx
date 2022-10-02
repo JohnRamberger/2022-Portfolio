@@ -18,30 +18,28 @@ const Footer: FC<FooterProps> = () => (
       <Flex dir="row" style={{ gap: "2em", flexWrap: "wrap" }}>
         {cont.sections.map((s, i) => {
           return (
-            <Flex
-              key={i}
-              dir="column"
-              style={{ flexWrap: "wrap" }}
-            >
+            <Flex key={i} dir="column" style={{ flexWrap: "wrap" }}>
               <h2 className={styles.Minor}>{s.label}</h2>
-              {s.links.map((l, j) => (
-                <>
-                  {l.type === "a" ? (
-                    <a
-                      key={j}
-                      href={l.url}
-                      className={styles.Link}
-                      target={l.target ?? ""}
-                    >
-                      {l.label}
-                    </a>
-                  ) : (
-                    <Link key={j} to={l.url} className={styles.Link}>
-                      {l.label}
-                    </Link>
-                  )}
-                </>
-              ))}
+              {s.links
+                ? s.links.map((l, j) => (
+                    <>
+                      {l.type === "a" ? (
+                        <a
+                          key={j}
+                          href={l.url}
+                          className={styles.Link}
+                          target={l.target ?? ""}
+                        >
+                          {l.label}
+                        </a>
+                      ) : (
+                        <Link key={j} to={l.url} className={styles.Link}>
+                          {l.label}
+                        </Link>
+                      )}
+                    </>
+                  ))
+                : ""}
             </Flex>
           );
         })}
