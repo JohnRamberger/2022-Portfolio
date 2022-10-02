@@ -40,6 +40,7 @@ export const HeroContent: HeroContentProps = {
     {
       label: "Resume",
       url: "",
+      target: "_blank",
     },
   ],
 };
@@ -123,7 +124,7 @@ type FooterSection = {
   links?: Link[];
 };
 
-type Link = {
+export type Link = {
   label: string;
   url: string;
   type?: "a" | "Link";
