@@ -38,8 +38,20 @@ export const HeroContent: HeroContentProps = {
   major: `Hey, I'm ${MeContent.fname}`,
   links: [
     {
+      label: "Email",
+      type: "a",
+      url: `mailto:${MeContent.email}`,
+    },
+    {
+      label: "Github",
+      type: "a",
+      url: MeContent.links.github,
+      target: "_blank",
+    },
+    {
       label: "Resume",
-      url: "",
+      type: "a",
+      url: "https://google.com",
       target: "_blank",
     },
   ],
