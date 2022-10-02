@@ -35,7 +35,7 @@ const Footer: FC<FooterProps> = () => (
 
               {s.links
                 ? s.links.map((l, j) => (
-                    <div className={styles.Link}>
+                    <div key={j} className={styles.Link}>
                       <Go link={l} />
                     </div>
                   ))
