@@ -3,8 +3,10 @@
 .Footer {
   width: 100%;
   height: fit-content;
-  border: 2px solid blue;
   font-family: "Outfit", sans-serif;
+  padding: 2em;
+  background: #111;
+  color: #fff;
 }
 
 .Wrapper {
@@ -12,15 +14,15 @@
   position: relative;
   width: 100%;
   margin: 0 auto;
-  border: 1px solid red;
 }
 
 .Minor {
-    font-size: 1.2em;
-    font-weight: 600;
+  font-size: 1.4em;
+  font-weight: 600;
 }
 
 .Link {
+  font-size: 1.2em;
   color: inherit;
   text-decoration: none;
   &:hover {

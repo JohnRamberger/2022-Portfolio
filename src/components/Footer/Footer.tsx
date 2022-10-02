@@ -15,13 +15,13 @@ const Footer: FC<FooterProps> = () => (
       className={styles.Wrapper}
       style={{ maxWidth: config.wrapper.default }}
     >
-      <Flex dir="row" style={{ gap: "1em", flexWrap: "wrap" }}>
+      <Flex dir="row" style={{ gap: "2em", flexWrap: "wrap" }}>
         {cont.sections.map((s, i) => {
           return (
             <Flex
               key={i}
               dir="column"
-              style={{ flexWrap: "wrap", border: "1px dashed green" }}
+              style={{ flexWrap: "wrap" }}
             >
               <h2 className={styles.Minor}>{s.label}</h2>
               {s.links.map((l, j) => (
