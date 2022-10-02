@@ -6,6 +6,7 @@ import Flex from "../../layout/Flex/Flex";
 import { FooterContent as cont } from "../../config/Content";
 import config from "../../config/config";
 import { Link } from "react-router-dom";
+import Go from "../Go/Go";
 
 interface FooterProps {}
 
@@ -32,24 +33,7 @@ const Footer: FC<FooterProps> = () => (
             <Flex key={i} dir="column" style={{ flexWrap: "wrap" }}>
               <h2 className={styles.Minor}>{s.label}</h2>
               {s.links
-                ? s.links.map((l, j) => (
-                    <>
-                      {l.type === "a" ? (
-                        <a
-                          key={j}
-                          href={l.url}
-                          className={styles.Link}
-                          target={l.target ?? ""}
-                        >
-                          {l.label}
-                        </a>
-                      ) : (
-                        <Link key={j} to={l.url} className={styles.Link}>
-                          {l.label}
-                        </Link>
-                      )}
-                    </>
-                  ))
+                ? s.links.map((l, j) => <Go link={l} className={styles.Link} />)
                 : ""}
             </Flex>
           );
