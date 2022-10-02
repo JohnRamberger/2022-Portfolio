@@ -1,11 +1,24 @@
-import React, { FC } from 'react';
-import styles from './Section.module.scss';
+import React, { FC } from "react";
+import styles from "./Section.module.scss";
 
-interface SectionProps {}
+import config from "../../config/config";
 
-const Section: FC<SectionProps> = () => (
-  <div className={styles.Section} data-testid="Section">
-    Section Component
+interface SectionProps {
+  children?: React.ReactNode;
+  style?: React.CSSProperties;
+}
+
+const Section: FC<SectionProps> = ({ children, style }) => (
+  <div className={styles.Section} data-testid="Section" style={style}>
+    <div
+      className={styles.Wrapper}
+      style={{
+        maxWidth: config.wrapper.section,
+        padding: `0 ${config.edgePadding}`,
+      }}
+    >
+      {children}
+    </div>
   </div>
 );
 
