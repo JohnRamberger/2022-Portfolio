@@ -45,11 +45,15 @@ export const ProjectContent = {};
 export const FooterContent = {
   sections: [
     {
-      label: "socials",
+      label: "Themes",
       links: [
         {
-          label: "test",
-          url: "#link1",
+          label: "Simple",
+          url: "/0",
+        },
+        {
+          label: "Sci Fi",
+          url: "/1",
         },
       ],
     },
