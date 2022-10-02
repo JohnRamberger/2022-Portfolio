@@ -34,13 +34,15 @@ type NavbarContentProps = {
   links: Link[];
 };
 
-export const HeroContent = {
+export const HeroContent: HeroContentProps = {
   major: `Hey, I'm ${MeContent.fname}`,
   minor: "A SWE located in Atlanta, GA",
-  button: {
-    label: "Explore",
-    url: "#next",
-  },
+};
+
+type HeroContentProps = {
+  major: string;
+  minor: string;
+  button?: Link;
 };
 
 export const ExperienceContent = {};
