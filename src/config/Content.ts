@@ -12,7 +12,7 @@ export const MeContent = {
 };
 
 export const NavbarContent: NavbarContentProps = {
-  title: "Portfolio",
+  title: `${MeContent.fname} ${MeContent.lname}`,
   links: [
     {
       label: "test1",
@@ -35,7 +35,7 @@ type NavbarContentProps = {
 };
 
 export const HeroContent = {
-  major: `Hello! I'm ${MeContent.fname} ${MeContent.lname}`,
+  major: `Hey, I'm ${MeContent.fname}`,
   minor: "A SWE located in Atlanta, GA",
   button: {
     label: "Explore",
