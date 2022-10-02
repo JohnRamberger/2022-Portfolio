@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 //load content
 import { NavbarContent as cont } from "../../../config/Content";
 import config from "../../../config/config";
+import Go from "../../Go/Go";
 
 interface NavbarProps {}
 
@@ -40,9 +41,9 @@ const Navbar: FC<NavbarProps> = () => (
           }}
         >
           {cont.links.map((l, i) => (
-            <Link key={i} to={l.url} className={styles.Link}>
-              {l.label}
-            </Link>
+            <div key={i} className={styles.Link}>
+              <Go link={l} />
+            </div>
           ))}
         </Flex>
       </Flex>
