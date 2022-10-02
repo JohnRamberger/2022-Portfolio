@@ -16,7 +16,7 @@ export const NavbarContent: NavbarContentProps = {
   links: [
     {
       label: "About",
-      url: "#About",
+      url: "#about",
     },
     {
       label: "Experience",
