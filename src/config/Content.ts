@@ -11,7 +11,7 @@ export const MeContent = {
   },
 };
 
-export const NavbarContent = {
+export const NavbarContent: NavbarContentProps = {
   title: "Portfolio",
   links: [
     {
@@ -29,6 +29,11 @@ export const NavbarContent = {
   ],
 };
 
+type NavbarContentProps = {
+  title: string;
+  links: Link[];
+};
+
 export const HeroContent = {
   major: `Hello! I'm ${MeContent.fname} ${MeContent.lname}`,
   minor: "A SWE located in Atlanta, GA",
@@ -42,8 +47,24 @@ export const ExperienceContent = {};
 
 export const ProjectContent = {};
 
-export const FooterContent = {
+export const FooterContent: FooterContentProps = {
   sections: [
+    {
+      label: "John Ramberger",
+      links: [
+        {
+          label: "Email",
+          type: "a",
+          url: `mailto:${MeContent.email}`,
+        },
+        {
+          label: "Github",
+          type: "a",
+          url: MeContent.links.github,
+          target: "_blank",
+        },
+      ],
+    },
     {
       label: "Themes",
       links: [
@@ -58,4 +79,20 @@ export const FooterContent = {
       ],
     },
   ],
+};
+
+type FooterContentProps = {
+  sections: FooterSection[];
+};
+
+type FooterSection = {
+  label: string;
+  links: Link[];
+};
+
+type Link = {
+  label: string;
+  url: string;
+  type?: "a" | "Link";
+  target?: "_blank";
 };
