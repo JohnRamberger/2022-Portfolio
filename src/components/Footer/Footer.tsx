@@ -5,7 +5,6 @@ import Flex from "../../layout/Flex/Flex";
 
 import { FooterContent as cont } from "../../config/Content";
 import config from "../../config/config";
-import { Link } from "react-router-dom";
 import Go from "../Go/Go";
 
 interface FooterProps {}
