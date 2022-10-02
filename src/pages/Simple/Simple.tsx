@@ -4,7 +4,6 @@ import page_styles from "../page.module.scss";
 
 import Navbar from "../../components/Simple/Navbar/Navbar";
 import Hero from "../../components/Simple/Hero/Hero";
-import Flex from "../../layout/Flex/Flex";
 
 interface SimpleProps {}
 
