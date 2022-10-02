@@ -1,5 +1,5 @@
 //put all page content here
-const Content = {
+export const Content = {
   fname: "John",
   lname: "Ramberger",
   email: "rambergerjohn@gmail.com",
@@ -12,7 +12,7 @@ const Content = {
   projects: {},
 };
 
-const NavbarContent = {
+export const NavbarContent = {
   title: "Portfolio",
   links: [
     {
@@ -30,4 +30,7 @@ const NavbarContent = {
   ],
 };
 
-export { Content, NavbarContent };
+export const HeroContent = {
+  major: `Hello! I'm ${Content.fname} ${Content.lname}`,
+  minor: "A SWE located in Atlanta, GA",
+};
