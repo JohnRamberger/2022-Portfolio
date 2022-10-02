@@ -2,7 +2,6 @@ import React, { FC } from "react";
 import styles from "./Hero.module.scss";
 
 import { HeroContent as cont } from "../../../config/Content";
-import { Link } from "react-router-dom";
 import Section from "../../../layout/Section/Section";
 import Flex from "../../../layout/Flex/Flex";
 import Go from "../../Go/Go";
