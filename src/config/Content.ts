@@ -15,16 +15,16 @@ export const NavbarContent: NavbarContentProps = {
   title: `${MeContent.fname} ${MeContent.lname}`,
   links: [
     {
-      label: "test1",
-      url: "#test1",
+      label: "About",
+      url: "#About",
     },
     {
-      label: "test2",
-      url: "#test2",
+      label: "Experience",
+      url: "#experience",
     },
     {
-      label: "test3",
-      url: "#test3",
+      label: "Projects",
+      url: "#projects",
     },
   ],
 };
