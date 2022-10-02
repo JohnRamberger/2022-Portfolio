@@ -36,13 +36,19 @@ type NavbarContentProps = {
 
 export const HeroContent: HeroContentProps = {
   major: `Hey, I'm ${MeContent.fname}`,
-  minor: "A SWE located in Atlanta, GA",
+  links: [
+    {
+      label: "Resume",
+      url: "",
+    },
+  ],
 };
 
 type HeroContentProps = {
   major: string;
-  minor: string;
+  minor?: string;
   button?: Link;
+  links?: Link[];
 };
 
 export const ExperienceContent = {};
