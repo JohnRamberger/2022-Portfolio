@@ -1,1 +1,13 @@
-.Footer {}
+.Footer {
+  width: 100%;
+  height: fit-content;
+  border: 2px solid blue;
+}
+
+.Wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid red;
+}
