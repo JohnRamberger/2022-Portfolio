@@ -6,6 +6,7 @@ export const Content = {
   gtemail: "jramberger3@gatech.edu",
   links: {
     github: "https://github.com/JohnRamberger",
+    this: "https://github.com/JohnRamberger/2022-Portfolio",
     linkedin: "https://www.linkedin.com/in/johnramberger/",
   },
   experience: {},
