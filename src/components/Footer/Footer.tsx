@@ -15,6 +15,7 @@ const Footer: FC<FooterProps> = () => (
       className={styles.Wrapper}
       style={{ maxWidth: config.wrapper.default }}
     >
+      {cont.message ? <h2 className={styles.Message}>{cont.message}</h2> : ""}
       <Flex
         dir="row"
         style={{
