@@ -72,7 +72,7 @@ export const ExperienceContent = {};
 export const ProjectContent: ProjectContentProps = {
   projects: [
     {
-      name: "Data Science at Georgia Tech Membership Portal",
+      name: "Data Science at GT Membership Portal",
       image: membership_portal,
       type: "team",
       start: "May 2022",
@@ -87,7 +87,7 @@ export const ProjectContent: ProjectContentProps = {
       ],
     },
     {
-      name: "Data Science at Georgia Tech Membership Portal",
+      name: "Data Science at GT Membership Portal",
       image: membership_portal,
       type: "team",
       start: "May 2022",
@@ -102,7 +102,7 @@ export const ProjectContent: ProjectContentProps = {
       ],
     },
     {
-      name: "Data Science at Georgia Tech Membership Portal",
+      name: "Data Science at GT Membership Portal",
       image: membership_portal,
       type: "team",
       start: "May 2022",
