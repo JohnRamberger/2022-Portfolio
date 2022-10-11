@@ -85,37 +85,7 @@ export const ProjectContent: ProjectContentProps = {
         "Used Node.js to manage packages and deployed application through Heroku (CI/CD).",
         "Tested using JEST and provided API Documentation including JSDoc and code comments.",
       ],
-    },
-    {
-      name: "Data Science at GT Membership Portal",
-      image: membership_portal,
-      type: "team",
-      start: "May 2022",
-      end: "Present",
-      desc: "Developed full-stack system to manage members and provided API to allow other services to connect to portal.",
-      lines: [
-        "Implemented front-end site using React.js and served through Express.js (written in TypeScript and SCSS).",
-        "Used PostgreSQL to store user data; accessed data through custom API.",
-        "Throttled API requests and traffic using rate limiting.",
-        "Used Node.js to manage packages and deployed application through Heroku (CI/CD).",
-        "Tested using JEST and provided API Documentation including JSDoc and code comments.",
-      ],
-    },
-    {
-      name: "Data Science at GT Membership Portal",
-      image: membership_portal,
-      type: "team",
-      start: "May 2022",
-      end: "Present",
-      desc: "Developed full-stack system to manage members and provided API to allow other services to connect to portal.",
-      lines: [
-        "Implemented front-end site using React.js and served through Express.js (written in TypeScript and SCSS).",
-        "Used PostgreSQL to store user data; accessed data through custom API.",
-        "Throttled API requests and traffic using rate limiting.",
-        "Used Node.js to manage packages and deployed application through Heroku (CI/CD).",
-        "Tested using JEST and provided API Documentation including JSDoc and code comments.",
-      ],
-    },
+    }
   ],
 };
 
