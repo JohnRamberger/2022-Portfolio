@@ -9,17 +9,27 @@ import Section from "../../layout/Section/Section";
 import Flex from "../../layout/Flex/Flex";
 import ProjectCard from "../../components/Simple/ProjectCard/ProjectCard";
 
+//import content
+import { ProjectContent } from "../../config/Content";
+
 interface SimpleProps {}
 
 const Simple: FC<SimpleProps> = () => (
   <div className={`${styles.Simple} ${page_styles.Page}`} data-testid="Simple">
     <Navbar />
     <Hero />
-    <Section>
-      <Flex dir="row" style={{ gap: "1em" }}>
-        <ProjectCard></ProjectCard>
-        <ProjectCard></ProjectCard>
-        <ProjectCard></ProjectCard>
+    <Section style={{ backgroundColor: "#ccc" }}>
+      <Flex
+        dir="row"
+        style={{
+          gap: "1em",
+          justifyContent: "space-between",
+          flexWrap: "wrap",
+        }}
+      >
+        {ProjectContent.projects.map((p, i) => (
+          <ProjectCard project={p} key={i}></ProjectCard>
+        ))}
       </Flex>
     </Section>
     <Footer />
