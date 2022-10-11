@@ -18,7 +18,8 @@ const Simple: FC<SimpleProps> = () => (
   <div className={`${styles.Simple} ${page_styles.Page}`} data-testid="Simple">
     <Navbar />
     <Hero />
-    <Section style={{ backgroundColor: "#ccc" }}>
+    <Section style={{ backgroundColor: "#ccc", padding: "1em 0" }}>
+      <h1 className={styles.Major}>Projects</h1>
       <Flex
         dir="row"
         style={{
