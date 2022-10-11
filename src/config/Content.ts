@@ -1,3 +1,6 @@
+//import images
+import membership_portal from "../assets/project_images/membership_portal.png";
+
 //put all page content here
 export const MeContent = {
   fname: "John",
@@ -70,6 +73,37 @@ export const ProjectContent: ProjectContentProps = {
   projects: [
     {
       name: "Data Science at Georgia Tech Membership Portal",
+      image: membership_portal,
+      type: "team",
+      start: "May 2022",
+      end: "Present",
+      desc: "Developed full-stack system to manage members and provided API to allow other services to connect to portal.",
+      lines: [
+        "Implemented front-end site using React.js and served through Express.js (written in TypeScript and SCSS).",
+        "Used PostgreSQL to store user data; accessed data through custom API.",
+        "Throttled API requests and traffic using rate limiting.",
+        "Used Node.js to manage packages and deployed application through Heroku (CI/CD).",
+        "Tested using JEST and provided API Documentation including JSDoc and code comments.",
+      ],
+    },
+    {
+      name: "Data Science at Georgia Tech Membership Portal",
+      image: membership_portal,
+      type: "team",
+      start: "May 2022",
+      end: "Present",
+      desc: "Developed full-stack system to manage members and provided API to allow other services to connect to portal.",
+      lines: [
+        "Implemented front-end site using React.js and served through Express.js (written in TypeScript and SCSS).",
+        "Used PostgreSQL to store user data; accessed data through custom API.",
+        "Throttled API requests and traffic using rate limiting.",
+        "Used Node.js to manage packages and deployed application through Heroku (CI/CD).",
+        "Tested using JEST and provided API Documentation including JSDoc and code comments.",
+      ],
+    },
+    {
+      name: "Data Science at Georgia Tech Membership Portal",
+      image: membership_portal,
       type: "team",
       start: "May 2022",
       end: "Present",
@@ -85,12 +119,13 @@ export const ProjectContent: ProjectContentProps = {
   ],
 };
 
-type ProjectContentProps = {
+export type ProjectContentProps = {
   projects: Project[];
 };
 
-type Project = {
+export type Project = {
   name: string;
+  image?: string;
   type: "personal" | "team" | "class";
   //the start date
   start?: string;
