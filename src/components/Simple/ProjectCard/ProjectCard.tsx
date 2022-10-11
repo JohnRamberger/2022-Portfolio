@@ -14,7 +14,11 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => (
       <div className={styles.Image}>
         <img alt={project?.name} src={project?.image} />
       </div>
-      <div className={styles.Title}>{`${project?.name} ${project?.type}`}</div>
+      <div className={styles.Title}>
+        {project?.name}
+        <span className={styles.ProjectType}>({project?.type})</span>
+      </div>
+      <div className={styles.Description}>{project?.desc}</div>
     </Flex>
   </div>
 );

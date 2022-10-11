@@ -1,26 +1,48 @@
 .ProjectCard {
   display: inline-block;
   height: fit-content;
-  width:28em;
+  width: 28em;
   max-width: 100%;
 
-  border: 1px solid red;
+  overflow: hidden;
+  border-radius: 0.5em;
+  background-color: #fff;
 }
 
 .Image {
   width: 100%;
-  height: 6em;
+  //   height: 14em;
+  height: fit-content;
   display: block;
   position: relative;
   overflow: hidden;
+  background: #000;
 
-  border: 1px solid blue;
   img {
     display: block;
     width: 100%;
     height: auto;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    // position: absolute;
+    // top: 50%;
+    // transform: translateY(-50%);
   }
+}
+
+.Title {
+  padding: 1em;
+  padding-bottom: 0.5em;
+  font-weight: 500;
+  font-size: 1.2em;
+  .ProjectType {
+    margin-left: 0.5em;
+    font-weight: 400;
+    font-size: 0.9em;
+    font-style: italic;
+    color: rgba($color: #000000, $alpha: 0.7);
+    text-transform: lowercase;
+  }
+}
+.Description {
+  padding: 1em;
+  padding-top: 0;
 }
