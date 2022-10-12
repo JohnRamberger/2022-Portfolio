@@ -1,11 +1,21 @@
 .Modal {
   display: block;
   position: fixed;
-  background-color: red;
   height: 100vh;
   width: 100vw;
   top: 0;
   left: 0;
+
+  .bg {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba($color: #000000, $alpha: 0.5);
+    z-index: -1;
+  }
 }
 .Open {
   display: flex;
