@@ -1,5 +1,7 @@
 //import images
 import membership_portal from "../assets/project_images/membership_portal.png";
+import hacklytics_site from "../assets/project_images/hacklytics.png";
+import dsgt_site from "../assets/project_images/datasciencegt.png";
 
 //put all page content here
 export const MeContent = {
@@ -88,6 +90,7 @@ export const ProjectContent: ProjectContentProps = {
     },
     {
       name: "DSGT Website",
+      image: dsgt_site,
       type: "team",
       start: "May 2022",
       end: "Present",
@@ -95,7 +98,10 @@ export const ProjectContent: ProjectContentProps = {
     },
     {
       name: "DSGT Hacklytics 2023 Website",
+      image: hacklytics_site,
       type: "team",
+      start: "May 2022",
+      end: "Present",
       desc: "Developed the website for DSGT's 2023 Hacklytics hackathon using React.",
     },
   ],
