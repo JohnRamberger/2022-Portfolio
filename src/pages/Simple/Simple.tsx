@@ -11,6 +11,7 @@ import ProjectCard from "../../components/Simple/ProjectCard/ProjectCard";
 
 //import content
 import { ProjectContent } from "../../config/Content";
+import Modal from "../../components/Simple/Modal/Modal";
 
 interface SimpleProps {}
 
@@ -34,6 +35,9 @@ const Simple: FC<SimpleProps> = () => (
       </Flex>
     </Section>
     <Footer />
+    <Modal open={true}>
+      <p>asdasda</p>
+    </Modal>
   </div>
 );
 
