@@ -72,7 +72,7 @@ export const ExperienceContent = {};
 export const ProjectContent: ProjectContentProps = {
   projects: [
     {
-      name: "Data Science at GT Membership Portal",
+      name: "DSGT Membership Portal",
       image: membership_portal,
       type: "team",
       start: "May 2022",
@@ -85,7 +85,19 @@ export const ProjectContent: ProjectContentProps = {
         "Used Node.js to manage packages and deployed application through Heroku (CI/CD).",
         "Tested using JEST and provided API Documentation including JSDoc and code comments.",
       ],
-    }
+    },
+    {
+      name: "DSGT Website",
+      type: "team",
+      start: "May 2022",
+      end: "Present",
+      desc: "Designed and developed the website for Data Science at Georgia Tech using React.",
+    },
+    {
+      name: "DSGT Hacklytics 2023 Website",
+      type: "team",
+      desc: "Developed the website for DSGT's 2023 Hacklytics hackathon using React.",
+    },
   ],
 };
 
