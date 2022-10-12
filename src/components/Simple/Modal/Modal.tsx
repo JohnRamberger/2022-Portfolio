@@ -32,7 +32,10 @@ const Modal: FC<ModalProps> = ({
     }
   };
   return (
-    <div className={styles.Modal} data-testid="Modal">
+    <div
+      className={`${styles.Modal} ${open ? styles.Open : styles.Closed}`}
+      data-testid="Modal"
+    >
       <div className={styles.bg} onClick={closeModal}></div>
       <div className={styles.Menu}>
         <img
