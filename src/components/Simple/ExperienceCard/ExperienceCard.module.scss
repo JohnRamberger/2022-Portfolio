@@ -13,7 +13,7 @@
 }
 
 .Image {
-  width: 20%;
+  width: 16%;
   height: 100%;
   position: relative;
   img {
@@ -27,4 +27,16 @@
   width: 100%;
   font-size: 1.2em;
   font-weight: 700;
+}
+
+.Position {
+  display: block;
+  width: 100%;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.Timeframe {
+  font-size: 0.9em;
+  font-weight: 300;
 }
