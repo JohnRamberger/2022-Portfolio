@@ -10,55 +10,74 @@ import Flex from "../../layout/Flex/Flex";
 import ProjectCard from "../../components/Simple/ProjectCard/ProjectCard";
 
 //import content
-import { ProjectContent, ExperienceContent } from "../../config/Content";
+import {
+  ProjectContent,
+  ExperienceContent,
+  Experience,
+} from "../../config/Content";
 import Modal from "../../components/Simple/Modal/Modal";
 import ExperienceCard from "../../components/Simple/ExperienceCard/ExperienceCard";
 
 interface SimpleProps {}
 
-const Simple: FC<SimpleProps> = () => (
-  <div className={`${styles.Simple} ${page_styles.Page}`} data-testid="Simple">
-    <Navbar />
-    <Hero />
-    <Section style={{ backgroundColor: "#ccc", padding: "1em 0" }}>
-      <h1 id="experience" className={styles.Major}>
-        Experience
-      </h1>
-      <Flex
-        dir="row"
-        style={{
-          gap: "1em",
-          justifyContent: "space-between",
-          flexWrap: "wrap",
-        }}
-      >
-        {ExperienceContent.experience?.map((e, i) => (
-          <ExperienceCard experience={e} key={i}></ExperienceCard>
-        ))}
-      </Flex>
-    </Section>
-    <Section style={{ padding: "1em 0" }}>
-      <h1 id="projects" className={styles.Major}>
-        Projects
-      </h1>
-      <Flex
-        dir="row"
-        style={{
-          gap: "1em",
-          justifyContent: "space-between",
-          flexWrap: "wrap",
-        }}
-      >
-        {ProjectContent.projects.map((p, i) => (
-          <ProjectCard project={p} key={i}></ProjectCard>
-        ))}
-      </Flex>
-    </Section>
-    <Footer />
-    {/* <Modal open={true}>
+const Simple: FC<SimpleProps> = () => {
+  return (
+    <div
+      className={`${styles.Simple} ${page_styles.Page}`}
+      data-testid="Simple"
+    >
+      <Navbar />
+      <Hero />
+      <Section style={{ backgroundColor: "#ccc", padding: "1em 0" }}>
+        <h1 id="experience" className={styles.Major}>
+          Experience
+        </h1>
+        <Flex
+          dir="row"
+          style={{
+            gap: "1em",
+            justifyContent: "space-between",
+            flexWrap: "wrap",
+          }}
+        >
+          {Array.from(
+            ExperienceContent.experience
+              ?.reduce((a, b) => {
+                if (a.has(b.company)) {
+                  return a.set(b.company, [...a.get(b.company), b]);
+                } else {
+                  return a.set(b.company, [b]);
+                }
+              }, new Map())
+              .values() || []
+          ).map((e, i) => (
+            <ExperienceCard experience={e} key={i}></ExperienceCard>
+          ))}
+        </Flex>
+      </Section>
+      <Section style={{ padding: "1em 0" }}>
+        <h1 id="projects" className={styles.Major}>
+          Projects
+        </h1>
+        <Flex
+          dir="row"
+          style={{
+            gap: "1em",
+            justifyContent: "space-between",
+            flexWrap: "wrap",
+          }}
+        >
+          {ProjectContent.projects.map((p, i) => (
+            <ProjectCard project={p} key={i}></ProjectCard>
+          ))}
+        </Flex>
+      </Section>
+      <Footer />
+      {/* <Modal open={true}>
       <p>asdasda</p>
     </Modal> */}
-  </div>
-);
+    </div>
+  );
+};
 
 export default Simple;
