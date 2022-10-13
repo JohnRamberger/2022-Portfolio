@@ -1,1 +1,23 @@
-.ExperienceCard {}
+.ExperienceCard {
+  display: inline-block;
+  height: fit-content;
+  width: 28em;
+  max-width: 100%;
+
+  overflow: hidden;
+  border-radius: 0.5em;
+  background-color: #fff;
+  padding: 1em;
+
+  border: 1px solid red;
+}
+
+.Image {
+  width: 20%;
+  height: 100%;
+  position: relative;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
