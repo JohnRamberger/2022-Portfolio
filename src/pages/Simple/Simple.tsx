@@ -1,6 +1,14 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import styles from "./Simple.module.scss";
 import page_styles from "../page.module.scss";
+
+//import content
+import {
+  ProjectContent,
+  ExperienceContent,
+  Experience,
+  Project,
+} from "../../config/Content";
 
 import Navbar from "../../components/Simple/Navbar/Navbar";
 import Hero from "../../components/Simple/Hero/Hero";
@@ -8,19 +16,15 @@ import Footer from "../../components/Footer/Footer";
 import Section from "../../layout/Section/Section";
 import Flex from "../../layout/Flex/Flex";
 import ProjectCard from "../../components/Simple/ProjectCard/ProjectCard";
-
-//import content
-import {
-  ProjectContent,
-  ExperienceContent,
-  Experience,
-} from "../../config/Content";
 import Modal from "../../components/Simple/Modal/Modal";
 import ExperienceCard from "../../components/Simple/ExperienceCard/ExperienceCard";
 
 interface SimpleProps {}
 
 const Simple: FC<SimpleProps> = () => {
+  const [projectModalOpen, setProjectModalOpen] = useState(false);
+  const [currentProject, setCurrentProject] = useState<Project>();
+
   return (
     <div
       className={`${styles.Simple} ${page_styles.Page}`}
@@ -41,7 +45,14 @@ const Simple: FC<SimpleProps> = () => {
           }}
         >
           {ProjectContent.projects.map((p, i) => (
-            <ProjectCard project={p} key={i}></ProjectCard>
+            <ProjectCard
+              project={p}
+              key={i}
+              handleClick={(e) => {
+                setCurrentProject(p);
+                setProjectModalOpen(true);
+              }}
+            ></ProjectCard>
           ))}
         </Flex>
       </Section>
@@ -73,9 +84,9 @@ const Simple: FC<SimpleProps> = () => {
         </Flex>
       </Section>
       <Footer />
-      {/* <Modal open={true}>
-      <p>asdasda</p>
-    </Modal> */}
+      <Modal open={projectModalOpen} setOpen={setProjectModalOpen}>
+        <p>{currentProject?.name}</p>
+      </Modal>
     </div>
   );
 };
