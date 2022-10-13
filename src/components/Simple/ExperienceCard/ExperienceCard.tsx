@@ -5,7 +5,7 @@ import { ExperienceContent, Experience } from "../../../config/Content";
 import Flex from "../../../layout/Flex/Flex";
 
 interface ExperienceCardProps {
-  experience?: Experience[];
+  experience: Experience[];
 }
 
 const ExperienceCard: FC<ExperienceCardProps> = ({ experience }) => {
@@ -22,15 +22,15 @@ const ExperienceCard: FC<ExperienceCardProps> = ({ experience }) => {
             ""
           )}
         </div>
-        {experience && experience.length > 1 ? (
+        {experience.length > 1 ? (
           //greater than 1 position
           <Flex dir="column" style={{ gap: "0.5em" }}>
-            a
+            <h2 className={styles.CompanyName}>{experience[0].company}</h2>
           </Flex>
         ) : (
           // only 1 position
           <Flex dir="column" style={{ gap: "0.5em" }}>
-            b
+            <h2 className={styles.CompanyName}>{experience[0].company}</h2>
           </Flex>
         )}
       </Flex>
