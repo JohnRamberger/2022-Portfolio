@@ -39,6 +39,10 @@
   background: #fff;
   border-radius: 0.5em;
   border: 1px solid #aaa;
+  overflow: hidden;
+  overflow-y: auto;
+
+  animation: 0.3s fadein;
 
   .MenuClose {
     position: absolute;
@@ -57,5 +61,16 @@
     &:hover {
       filter: brightness(0.9);
     }
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    margin-top: 2em;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
   }
 }
