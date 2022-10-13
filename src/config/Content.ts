@@ -77,7 +77,7 @@ export const ExperienceContent: ExperienceContentProps = {
     {
       company: "Data Science at Georgia Tech",
       company_image: dsgt_logo,
-      position: "Member of Technology Team",
+      position: "Jr. Software Engineer",
       start: "August 2021",
       end: "May 2022",
     },
