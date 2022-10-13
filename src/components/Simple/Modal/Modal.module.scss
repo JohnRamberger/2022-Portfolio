@@ -42,7 +42,7 @@
   overflow: hidden;
   overflow-y: auto;
 
-  animation: 0.3s fadein;
+  animation: 0.5s fadein ease;
 
   .MenuClose {
     position: absolute;
@@ -52,7 +52,8 @@
     height: 3em;
     padding: 0.5em;
     margin: 0.5em;
-    background-color: #fff;
+    background: rgba($color: #fff, $alpha: 0.8);
+    filter: invert(100%);
     border: 1px solid #aaa;
     border-radius: 50%;
     z-index: 999;
