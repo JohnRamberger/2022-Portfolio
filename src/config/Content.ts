@@ -1,7 +1,10 @@
-//import images
+//import project images
 import membership_portal from "../assets/project_images/membership_portal.png";
 import hacklytics_site from "../assets/project_images/hacklytics.png";
 import dsgt_site from "../assets/project_images/datasciencegt.png";
+
+//import experience images
+import dsgt_logo from "../assets/experience_images/dsgt.png";
 
 //put all page content here
 export const MeContent = {
@@ -69,7 +72,37 @@ type HeroContentProps = {
   links?: Link[];
 };
 
-export const ExperienceContent = {};
+export const ExperienceContent: ExperienceContentProps = {
+  experience: [
+    {
+      company: "Data Science at Georgia Tech",
+      company_image: dsgt_logo,
+      position: "Member of Technology Team",
+      start: "August 2021",
+      end: "May 2022",
+    },
+    {
+      company: "Data Science at Georgia Tech",
+      company_image: dsgt_logo,
+      position: "Director of Technology",
+      start: "May 2022",
+      end: "present",
+    },
+  ],
+};
+
+export type ExperienceContentProps = {
+  experience?: Experience[];
+};
+
+export type Experience = {
+  company: string;
+  company_image?: string;
+  position: string;
+  start?: string;
+  end?: string;
+  lines?: string[]
+};
 
 export const ProjectContent: ProjectContentProps = {
   projects: [
