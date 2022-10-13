@@ -26,11 +26,13 @@ const ExperienceCard: FC<ExperienceCardProps> = ({ experience }) => {
           //greater than 1 position
           <Flex dir="column" style={{ gap: "0.5em" }}>
             <h2 className={styles.CompanyName}>{experience[0].company}</h2>
+            
           </Flex>
         ) : (
           // only 1 position
           <Flex dir="column" style={{ gap: "0.5em" }}>
             <h2 className={styles.CompanyName}>{experience[0].company}</h2>
+            
           </Flex>
         )}
       </Flex>
