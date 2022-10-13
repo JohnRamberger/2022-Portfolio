@@ -9,7 +9,7 @@
   background-color: #fff;
   padding: 1em;
 
-  border: 1px solid red;
+  border: 1px solid #aaa;
 }
 
 .Image {
@@ -36,7 +36,15 @@
   font-weight: 500;
 }
 
+.SmallPosition {
+  display: block;
+  width: 100%;
+  font-size: 1em;
+  font-weight: 400;
+}
+
 .Timeframe {
   font-size: 0.9em;
-  font-weight: 300;
+  font-weight: 400;
+  color: rgba($color: #000000, $alpha: 0.5);
 }

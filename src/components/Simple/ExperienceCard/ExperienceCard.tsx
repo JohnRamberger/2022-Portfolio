@@ -52,12 +52,12 @@ const ExperienceCard: FC<ExperienceCardProps> = ({ experience }) => {
           <Flex dir="column" style={{ gap: "1em" }}>
             <div>
               <h2 className={styles.CompanyName}>{experience[0].company}</h2>
-              <p className={styles.Timeframe}>{times.join(" ")}</p>
+              <p className={styles.Timeframe}>{`${times.join(" ")}`}</p>
             </div>
             {experience
               .sort((a, b) => {
                 //more recent first
-                return 1
+                return 1;
                 // if (a.start && b.start) return -1;
                 // return 0;
                 // return new Date(a.start.);
@@ -76,7 +76,21 @@ const ExperienceCard: FC<ExperienceCardProps> = ({ experience }) => {
         ) : (
           // only 1 position
           <Flex dir="column" style={{ gap: "0.5em" }}>
-            <h2 className={styles.CompanyName}>{experience[0].company}</h2>
+            <div>
+              <h2 className={styles.CompanyName}>{experience[0].position}</h2>
+              <p
+                className={styles.SmallPosition}
+              >{`${experience[0].company}`}</p>
+              <p className={styles.Timeframe}>
+                {`${
+                  experience[0].start && experience[0].end
+                    ? `${experience[0].start} — ${
+                        experience[0].end
+                      } • ${times.join(" ")}`
+                    : experience[0].start || experience[0].end || ""
+                }`}
+              </p>
+            </div>
           </Flex>
         )}
       </Flex>
