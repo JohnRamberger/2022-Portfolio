@@ -88,6 +88,10 @@ export const ExperienceContent: ExperienceContentProps = {
       start: "May 2022",
       end: "present",
     },
+    {
+      company: "asd",
+      position: "Sadad",
+    },
   ],
 };
 
@@ -101,7 +105,7 @@ export type Experience = {
   position: string;
   start?: string;
   end?: string;
-  lines?: string[]
+  lines?: string[];
 };
 
 export const ProjectContent: ProjectContentProps = {
