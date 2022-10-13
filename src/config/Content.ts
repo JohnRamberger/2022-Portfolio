@@ -77,21 +77,17 @@ export const ExperienceContent: ExperienceContentProps = {
     {
       company: "Data Science at Georgia Tech",
       company_image: dsgt_logo,
-      position: "Jr. Software Engineer",
-      start: "August 2021",
-      end: "May 2022",
-    },
-    {
-      company: "Data Science at Georgia Tech",
-      company_image: dsgt_logo,
       position: "Director of Technology",
       start: "May 2022",
       end: "present",
     },
     {
-      company: "asd",
-      position: "Sadad",
-    },
+      company: "Data Science at Georgia Tech",
+      company_image: dsgt_logo,
+      position: "Jr. Software Engineer",
+      start: "August 2021",
+      end: "May 2022",
+    }
   ],
 };
 
@@ -103,6 +99,7 @@ export type Experience = {
   company: string;
   company_image?: string;
   position: string;
+  type?: "internship" | "full-time" | "part-time";
   start?: string;
   end?: string;
   lines?: string[];
