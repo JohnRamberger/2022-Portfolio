@@ -10,8 +10,9 @@ import Flex from "../../layout/Flex/Flex";
 import ProjectCard from "../../components/Simple/ProjectCard/ProjectCard";
 
 //import content
-import { ProjectContent } from "../../config/Content";
+import { ProjectContent, ExperienceContent } from "../../config/Content";
 import Modal from "../../components/Simple/Modal/Modal";
+import ExperienceCard from "../../components/Simple/ExperienceCard/ExperienceCard";
 
 interface SimpleProps {}
 
@@ -31,8 +32,8 @@ const Simple: FC<SimpleProps> = () => (
           flexWrap: "wrap",
         }}
       >
-        {ProjectContent.projects.map((p, i) => (
-          <ProjectCard project={p} key={i}></ProjectCard>
+        {ExperienceContent.experience?.map((e, i) => (
+          <ExperienceCard experience={e} key={i}></ExperienceCard>
         ))}
       </Flex>
     </Section>
