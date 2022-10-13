@@ -20,7 +20,26 @@ const Simple: FC<SimpleProps> = () => (
     <Navbar />
     <Hero />
     <Section style={{ backgroundColor: "#ccc", padding: "1em 0" }}>
-      <h1 className={styles.Major}>Projects</h1>
+      <h1 id="experience" className={styles.Major}>
+        Experience
+      </h1>
+      <Flex
+        dir="row"
+        style={{
+          gap: "1em",
+          justifyContent: "space-between",
+          flexWrap: "wrap",
+        }}
+      >
+        {ProjectContent.projects.map((p, i) => (
+          <ProjectCard project={p} key={i}></ProjectCard>
+        ))}
+      </Flex>
+    </Section>
+    <Section style={{ padding: "1em 0" }}>
+      <h1 id="projects" className={styles.Major}>
+        Projects
+      </h1>
       <Flex
         dir="row"
         style={{
@@ -35,9 +54,9 @@ const Simple: FC<SimpleProps> = () => (
       </Flex>
     </Section>
     <Footer />
-    <Modal open={true}>
+    {/* <Modal open={true}>
       <p>asdasda</p>
-    </Modal>
+    </Modal> */}
   </div>
 );
 
