@@ -29,6 +29,23 @@ const Simple: FC<SimpleProps> = () => {
       <Navbar />
       <Hero />
       <Section style={{ backgroundColor: "#ccc", padding: "1em 0" }}>
+        <h1 id="projects" className={styles.Major}>
+          Projects
+        </h1>
+        <Flex
+          dir="row"
+          style={{
+            gap: "1em",
+            justifyContent: "space-between",
+            flexWrap: "wrap",
+          }}
+        >
+          {ProjectContent.projects.map((p, i) => (
+            <ProjectCard project={p} key={i}></ProjectCard>
+          ))}
+        </Flex>
+      </Section>
+      <Section style={{ padding: "1em 0" }}>
         <h1 id="experience" className={styles.Major}>
           Experience
         </h1>
@@ -52,23 +69,6 @@ const Simple: FC<SimpleProps> = () => {
               .values() || []
           ).map((e, i) => (
             <ExperienceCard experience={e} key={i}></ExperienceCard>
-          ))}
-        </Flex>
-      </Section>
-      <Section style={{ padding: "1em 0" }}>
-        <h1 id="projects" className={styles.Major}>
-          Projects
-        </h1>
-        <Flex
-          dir="row"
-          style={{
-            gap: "1em",
-            justifyContent: "space-between",
-            flexWrap: "wrap",
-          }}
-        >
-          {ProjectContent.projects.map((p, i) => (
-            <ProjectCard project={p} key={i}></ProjectCard>
           ))}
         </Flex>
       </Section>
