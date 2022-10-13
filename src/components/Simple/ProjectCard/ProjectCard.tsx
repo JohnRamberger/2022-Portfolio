@@ -6,10 +6,17 @@ import Flex from "../../../layout/Flex/Flex";
 
 interface ProjectCardProps {
   project?: Project;
+  handleClick?: (e: React.MouseEvent) => void;
 }
 
-const ProjectCard: FC<ProjectCardProps> = ({ project }) => (
-  <div className={styles.ProjectCard} data-testid="ProjectCard">
+const ProjectCard: FC<ProjectCardProps> = ({ project, handleClick }) => (
+  <div
+    className={styles.ProjectCard}
+    data-testid="ProjectCard"
+    onClick={(e) => {
+      if (handleClick) handleClick(e);
+    }}
+  >
     <Flex dir="column" style={{ width: "100%" }}>
       <div className={styles.Image}>
         <img alt={project?.name} src={project?.image} />
