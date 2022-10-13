@@ -85,7 +85,15 @@ const Simple: FC<SimpleProps> = () => {
       </Section>
       <Footer />
       <Modal open={projectModalOpen} setOpen={setProjectModalOpen}>
-        <p>{currentProject?.name}</p>
+        <div className={styles.ProjectModal}>
+          <div className={styles.CoverImage}>
+            <img src={currentProject?.image} alt={currentProject?.name} />
+            <div className={styles.Fade}>
+              <h1 className={styles.ProjectName}>{currentProject?.name}</h1>
+            </div>
+            {/* <span className={styles.Fade}></span> */}
+          </div>
+        </div>
       </Modal>
     </div>
   );
