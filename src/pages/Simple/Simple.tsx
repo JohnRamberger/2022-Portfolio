@@ -91,7 +91,7 @@ const Simple: FC<SimpleProps> = () => {
             <div className={styles.Fade}>
               <h1 className={styles.ProjectName}>{currentProject?.name}</h1>
             </div>
-            {/* <span className={styles.Fade}></span> */}
+            
           </div>
         </div>
       </Modal>
