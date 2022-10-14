@@ -91,8 +91,15 @@ const Simple: FC<SimpleProps> = () => {
             <div className={styles.Fade}>
               <h1 className={styles.ProjectName}>{currentProject?.name}</h1>
             </div>
-            
           </div>
+          <Flex dir="column" style={{ gap: "1em", padding: "1em" }}>
+            <h3>
+              {currentProject?.start && currentProject?.end
+                ? `${currentProject.start} — ${currentProject.end}`
+                : `${currentProject?.start || currentProject?.end}`}
+              {` • ${currentProject?.type}`}
+            </h3>
+          </Flex>
         </div>
       </Modal>
     </div>
