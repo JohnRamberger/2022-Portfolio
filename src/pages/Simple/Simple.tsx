@@ -93,12 +93,23 @@ const Simple: FC<SimpleProps> = () => {
             </div>
           </div>
           <Flex dir="column" style={{ gap: "1em", padding: "1em" }}>
-            <h3>
+            <h3 className={styles.TimeTeam}>
               {currentProject?.start && currentProject?.end
                 ? `${currentProject.start} — ${currentProject.end}`
                 : `${currentProject?.start || currentProject?.end}`}
               {` • ${currentProject?.type}`}
             </h3>
+            <h4 className={styles.SubHeader}>Description</h4>
+            <p className={styles.Description}>{currentProject?.desc}</p>
+            {currentProject?.lines && currentProject.lines.length > 0 ? (
+              <ul className={styles.Lines}>
+                {currentProject.lines.map((l, i) => (
+                  <li key={i}>{l}</li>
+                ))}
+              </ul>
+            ) : (
+              ""
+            )}
           </Flex>
         </div>
       </Modal>

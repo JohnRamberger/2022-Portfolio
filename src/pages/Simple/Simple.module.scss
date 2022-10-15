@@ -64,6 +64,22 @@
       }
     }
   }
+  .TimeTeam {
+    font-size: 1.2em;
+    font-weight: 400;
+  }
+  .SubHeader {
+    font-size: 1.6em;
+    font-weight: 600;
+  }
+  .Lines,
+  .Description {
+    font-size: 1.4em;
+  }
+  .Lines {
+    display: block;
+    padding-left: 1em;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
