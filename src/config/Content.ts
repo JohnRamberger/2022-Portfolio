@@ -25,16 +25,14 @@ export const NavbarContent: NavbarContentProps = {
   title: `${MeContent.fname} ${MeContent.lname}`,
   links: [
     {
-      label: "About",
-      url: "#about",
+      label: "Projects",
+      url: "#projects",
+      type: "a",
     },
     {
       label: "Experience",
       url: "#experience",
-    },
-    {
-      label: "Projects",
-      url: "#projects",
+      type: "a",
     },
   ],
 };
@@ -168,14 +166,17 @@ export const FooterContent: FooterContentProps = {
         {
           label: "Home",
           url: `#`,
-        },
-        {
-          label: "Experience",
-          url: `#experience`,
+          type: "a",
         },
         {
           label: "Projects",
           url: "#projects",
+          type: "a",
+        },
+        {
+          label: "Experience",
+          url: `#experience`,
+          type: "a",
         },
       ],
     },
