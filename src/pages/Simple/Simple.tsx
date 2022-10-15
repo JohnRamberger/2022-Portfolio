@@ -32,10 +32,11 @@ const Simple: FC<SimpleProps> = () => {
     >
       <Navbar />
       <Hero />
-      <Section style={{ backgroundColor: "#ccc", padding: "1em 0" }}>
-        <h1 id="projects" className={styles.Major}>
-          Projects
-        </h1>
+      <Section
+        id="projects"
+        style={{ backgroundColor: "#ccc", padding: "1em 0" }}
+      >
+        <h1 className={styles.Major}>Projects</h1>
         <Flex
           dir="row"
           style={{
@@ -56,8 +57,8 @@ const Simple: FC<SimpleProps> = () => {
           ))}
         </Flex>
       </Section>
-      <Section style={{ padding: "1em 0" }}>
-        <h1 id="experience" className={styles.Major}>
+      <Section id="experience" style={{ padding: "1em 0" }}>
+        <h1 className={styles.Major}>
           Experience
         </h1>
         <Flex
