@@ -17,6 +17,8 @@ export const MeContent = {
     this: "https://github.com/JohnRamberger/2022-Portfolio",
     linkedin: "https://www.linkedin.com/in/johnramberger/",
   },
+  about:
+    "Computer Science student with strong technical, organizational, and communication skills seeking a summer internship beginning May 2023. Pursuing a bachelor’s degree in Computer Science with a concentration in information/internetworks and intelligence.",
 };
 
 export const NavbarContent: NavbarContentProps = {
@@ -87,7 +89,7 @@ export const ExperienceContent: ExperienceContentProps = {
       position: "Jr. Software Engineer",
       start: "August 2021",
       end: "May 2022",
-    }
+    },
   ],
 };
 
