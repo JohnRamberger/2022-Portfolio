@@ -209,10 +209,10 @@ export const FooterContent: FooterContentProps = {
           label: "Simple",
           url: "/0",
         },
-        // {
-        //   label: "Sci Fi",
-        //   url: "/1",
-        // },
+        {
+          label: "Sci Fi",
+          url: "/1",
+        },
       ],
     },
   ],
