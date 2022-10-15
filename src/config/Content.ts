@@ -57,6 +57,12 @@ export const HeroContent: HeroContentProps = {
       target: "_blank",
     },
     {
+      label: "LinkedIn",
+      type: "a",
+      url: MeContent.links.linkedin,
+      target: "_blank",
+    },
+    {
       label: "Resume",
       type: "a",
       url: "https://google.com",
