@@ -6,10 +6,11 @@ import config from "../../config/config";
 interface SectionProps {
   children?: React.ReactNode;
   style?: React.CSSProperties;
+  id?: string;
 }
 
-const Section: FC<SectionProps> = ({ children, style }) => (
-  <div className={styles.Section} data-testid="Section" style={style}>
+const Section: FC<SectionProps> = ({ children, style, id }) => (
+  <div className={styles.Section} data-testid="Section" style={style} id={id}>
     <div
       className={styles.Wrapper}
       style={{
