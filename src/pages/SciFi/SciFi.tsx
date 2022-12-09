@@ -3,7 +3,7 @@ import Footer from "../../components/Footer/Footer";
 import ExperienceCard from "../../components/Simple/ExperienceCard/ExperienceCard";
 import Hero from "../../components/SciFi/Hero/Hero";
 import Modal from "../../components/Simple/Modal/Modal";
-import Navbar from "../../components/Simple/Navbar/Navbar";
+import Navbar from "../../components/SciFi/Navbar/Navbar";
 import ProjectCard from "../../components/Simple/ProjectCard/ProjectCard";
 import {
   ExperienceContent,
@@ -41,7 +41,7 @@ const SciFi: FC<SciFiProps> = () => {
       <Hero />
       <Section
         id="projects"
-        style={{ backgroundColor: "#ccc", padding: "1em 0" }}
+        style={{ backgroundColor: "#000", padding: "1em 0" }}
       >
         <h1 className={styles.Major}>Projects</h1>
         <Flex
