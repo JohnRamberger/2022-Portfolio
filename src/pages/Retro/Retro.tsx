@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useState } from "react";
 import Footer from "../../components/Footer/Footer";
 import ExperienceCard from "../../components/Simple/ExperienceCard/ExperienceCard";
-import Hero from "../../components/SciFi/Hero/Hero";
+import Hero from "../../components/Retro/Hero/Hero";
 import Modal from "../../components/Simple/Modal/Modal";
 import Navbar from "../../components/Simple/Navbar/Navbar";
 import ProjectCard from "../../components/Simple/ProjectCard/ProjectCard";
@@ -12,11 +12,11 @@ import {
 } from "../../config/Content";
 import Flex from "../../layout/Flex/Flex";
 import Section from "../../layout/Section/Section";
-import styles from "./SciFi.module.scss";
+import styles from "./Retro.module.scss";
 
-interface SciFiProps {}
+interface RetroProps {}
 
-const SciFi: FC<SciFiProps> = () => {
+const Retro: FC<RetroProps> = () => {
   const [projectModalOpen, setProjectModalOpen] = useState(false);
   const [currentProject, setCurrentProject] = useState<Project>();
 
@@ -32,7 +32,7 @@ const SciFi: FC<SciFiProps> = () => {
   }, []);
 
   return (
-    <div className={styles.SciFi} data-testid="SciFi">
+    <div className={styles.Retro} data-testid="Retro">
       <span
         className={styles.Cursor}
         style={{ top: mousePos.y, left: mousePos.x }}
@@ -123,4 +123,4 @@ const SciFi: FC<SciFiProps> = () => {
   );
 };
 
-export default SciFi;
+export default Retro;
